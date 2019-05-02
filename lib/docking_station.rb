@@ -6,7 +6,11 @@ class DockingStation
   end
 
   def release_bike
-    Bike.new()
+    if @all_bikes == []
+      raise "It is empty"
+    else
+      @all_bikes.pop()
+    end 
   end
 
   def dock(bike)
