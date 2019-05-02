@@ -9,4 +9,10 @@ describe DockingStation do
     expect(bike).to be_working
   end
 
+  it "We are able to dock a bike to a station" do
+    bike = double()
+    subject.dock(bike)
+    expect(subject.all_bikes).to include(bike)
+  end
+
 end
